@@ -296,7 +296,7 @@ def main():
                     node_stats[callsign]['packets'] = node_stats[callsign].get('packets', 0) + 1
                     node_stats[callsign]['last_packet'] = line
                     
-                    # Controllo duplicati
+                    # Controlla i duplicati
                     if is_duplicate(line):
                         print(f"DUPLICATO IGNORATO: {line}")
                         continue
