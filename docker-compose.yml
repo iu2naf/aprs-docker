@@ -1,10 +1,22 @@
 services:
   aprs:
-    #build: .
-    image: ghcr.io/iu2naf/aprs-docker:main
+    # Usa tag pinnabili (es. APRS_IMAGE_TAG=sha-<commit>) per build riproducibili
+    image: ghcr.io/iu2naf/aprs-docker:${APRS_IMAGE_TAG:-main}
     container_name: aprs-docker
     restart: unless-stopped
     ports:
       - "14501:14501"
       - "14580:14580"
       - "14581:14581"
+    environment:
+      - CFS_HEARTBEAT_INTERVAL=30
+      - CFS_MAX_CLIENTS_PER_PORT=2
+      - CFS_IDLE_TIMEOUT=300
+      - CFS_LOG_DIR=/opt/aprstac/logs
+    volumes:
+      - aprstac-data:/opt/aprstac/data
+      - aprstac-logs:/opt/aprstac/logs
+
+volumes:
+  aprstac-data:
+  aprstac-logs:

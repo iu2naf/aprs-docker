@@ -43,4 +43,11 @@ inc/
 # Language
 *.pl
 
+# Python
+__pycache__/
+*.pyc
+
+# Log e dati runtime
+*.log
+data/
 
