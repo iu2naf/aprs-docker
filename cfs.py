@@ -12,7 +12,7 @@ Basato originariamente sullo script cfs.pl di:
   Giovanni - IW1CGW (https://iw1cgw.wordpress.com/2025/06/22/lora-aprs-system)
 
 Modificato e convertito in Python il 28/07/2026 da:
-  Diego - IU2NAF per il CISAR Sezione Orobie (Bergamo)
+  Diego - IU2NAF
 ==============================================================================
 """
 
