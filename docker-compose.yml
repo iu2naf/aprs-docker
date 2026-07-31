@@ -1,0 +1,9 @@
+services:
+  aprs:
+    build: .
+    container_name: aprs-docker
+    restart: unless-stopped
+    ports:
+      - "14501:14501"
+      - "14580:14580"
+      - "14581:14581"
