@@ -14,9 +14,5 @@ services:
       - CFS_IDLE_TIMEOUT=300
       - CFS_LOG_DIR=/opt/aprstac/logs
     volumes:
-      - aprstac-data:/opt/aprstac/data
-      - aprstac-logs:/opt/aprstac/logs
-
-volumes:
-  aprstac-data:
-  aprstac-logs:
+      - ${APRS_DATA_DIR:-./data}:/opt/aprstac/data
+      - ${APRS_LOGS_DIR:-./logs}:/opt/aprstac/logs
