@@ -1,6 +1,7 @@
 services:
   aprs:
-    build: .
+    #build: .
+    image: ghcr.io/iu2naf/aprs-docker:main
     container_name: aprs-docker
     restart: unless-stopped
     ports:
