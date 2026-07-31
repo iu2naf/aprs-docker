@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     vim curl htop mc net-tools \
     && rm -rf /var/lib/apt/lists/*
 
-ARG APSTAC_DEB_URL=https://aprstac.com/downloads/aprstac_0.2.2_amd64.deb
+ARG APSTAC_DEB_URL=https://aprstac.com/downloads/aprstac_0.2.4_amd64.deb
 RUN curl -fsSL "$APSTAC_DEB_URL" -o /tmp/aprstac.deb \
     && dpkg -i /tmp/aprstac.deb \
     && rm -f /tmp/aprstac.deb
